@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="jpg/png" href="/logo.png" />
+    <title>Best Korean Delicious Cake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/120205b294.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Whisper&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 170px;
+    }
+    #header {
+      width: 100%;
+      height: 100vh;
+      background-image: url(/cake\ daun.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      padding: 10px 10%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: wrap;
+    }
+
+    .logo {
+      width: 70px;
+      border-radius: 70px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+    }
+    nav ul li a::after {
+      content: "";
+      width: 0;
+      height: 3px;
+      background: #f9ebc7;
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      transition: 1s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "poppins", "sans-serif";
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #ccbb9b;
+      color: #fff;
+    }
+    .enjoy {
+      display: flex;
+      text-align: center;
+      align-items: flex-end;
+      height: 250px;
+      margin-left: 250px;
+      margin-right: 250px;
+      font-size: 60px;
+      text-shadow: black 0 5px 5px;
+    }
+    .yow {
+      display: flex;
+      text-align: center;
+      align-items: flex-start;
+      height: 70px;
+      margin-left: 300px;
+      margin-right: 300px;
+      font-size: 20px;
+      color: #cad19f;
+      text-shadow: black 0 2px 5px;
+      font-weight: bold;
+    }
+    .tombol {
+      display: flex;
+      height: 150px;
+      width: 100%;
+      justify-content: center;
+      padding: 20px;
+    }
+    .button {
+      margin: 20px;
+
+      border-radius: 9px;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      color: #fff;
+    }
+    .reservasi {
+      background-color: #737759;
+      transition: 0.5s;
+      padding: 20px 10px;
+    }
+    .reservasi:hover {
+      background-color: #535231;
+    }
+    .order {
+      border: 3px solid #fff;
+      background-color: transparent;
+      padding: 18px 50px;
+      transition: 0.5s;
+    }
+    .order:hover {
+      background-color: #fff;
+      color: #737759;
+    }
+    .gambar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .kotak {
+      height: 300px;
+      width: 300px;
+      margin: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .satu img {
+      display: flex;
+      height: 300px;
+      width: 300px;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+    .satu img:hover {
+      filter: brightness(70%);
+    }
+    .dua img {
+      display: flex;
+      height: auto;
+      width: 300px;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+    .dua img:hover {
+      filter: brightness(70%);
+    }
+    .dua {
+      height: 450px;
+      width: 300px;
+    }
+    .tiga img {
+      display: flex;
+      height: 300px;
+      width: 300px;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+    .tiga img:hover {
+      filter: brightness(70%);
+    }
+    .populer h2 {
+      height: 300px;
+      width: 200px;
+      text-align: right;
+      font-size: 40px;
+      padding-right: 30px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    .populer button {
+      display: flex;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 10px;
+      background-color: #737759;
+      color: #fff;
+      margin-left: 30px;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    .populer button:hover {
+      background-color: #535231;
+    }
+    .gambar1 {
+      height: 470px;
+      width: 240px;
+      border-radius: 10px;
+      box-shadow: black 0 5px 10px;
+      margin: 20px;
+      background-color: #737759;
+      border: none;
+      padding: 20px;
+      transition: 1s;
+    }
+    .gambar1:hover {
+      background: #816246;
+      transform: translateY(-10px);
+    }
+    .gambar1 img {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+    }
+    .icon {
+      border: none;
+      height: 55px;
+      width: 48px;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 50px;
+      background-color: #cad19f;
+      box-shadow: black 0 3px 5px;
+      transition: 0.5s;
+      cursor: pointer;
+      margin-right: 70px;
+    }
+    .fa-bag-shopping {
+      font-size: 30px;
+      color: #535231;
+      transition: 0.5s;
+    }
+    .icon:hover {
+      background-color: #535231;
+    }
+    .fa-bag-shopping:hover {
+      color: #fff;
+    }
+    .kotakaa {
+      display: flex;
+    }
+    .judul {
+      display: flex;
+      text-align: center;
+      align-items: flex-end;
+      height: 120px;
+      margin-left: 250px;
+      margin-right: 250px;
+      font-size: 60px;
+      text-shadow: black 0 5px 5px;
+    }
+    .limited {
+      display: flex;
+      height: 500px;
+      width: 1200px;
+      justify-content: space-between;
+      padding: 50px 150px 30px 150px;
+      background-color: #cad19f;
+      margin-left: 90px;
+      border-radius: 20px;
+      box-shadow: 0 5px 10px black;
+    }
+    .limited img {
+      width: 300px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: black 0 3px 10px;
+    }
+    .text-cake {
+      font-family: "whisper", sans-serif;
+      font-size: 50px;
+      margin: 50px 0 0 0;
+      text-shadow: black 0 3px 10px;
+      color: #535231;
+    }
+    .text-cake-subjudul {
+      text-shadow: black 0 3px 10px;
+      margin-bottom: 50px;
+    }
+    .text-cake-isi {
+      height: 150px;
+      width: 450px;
+    }
+    .latar-belakang {
+      background-color: #535231;
+      height: 680px;
+    }
+    .tombol-order {
+      height: 40px;
+      width: 100px;
+      padding: 10px 5px;
+      margin-bottom: 50px;
+      background-color: transparent;
+      border: 2px solid #737759;
+      color: #737759;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    .tombol-order:hover {
+      background-color: #fff;
+      transform: translateX(10px);
+    }
+    .contact-left p {
+      margin-top: 30px;
+    }
+    .contact-left p i {
+      color: #737759;
+      margin-right: 15px;
+      font-size: 30px;
+    }
+    .social-icons {
+      margin-top: 30px;
+    }
+    .social-icons a {
+      text-decoration: none;
+      font-size: 30px;
+      margin-right: 15px;
+      color: #737759;
+      display: inline-block;
+      transition: transform 0.5s;
+    }
+    .social-icons a:hover {
+      color: #535231;
+      transform: translateY(-5px);
+    }
+    .btn.btn2 {
+      display: inline-block;
+      background: #737759;
+      border-radius: 20px;
+      color: #fff;
+      border: none;
+      transition: 0.5s;
+    }
+    .btn.btn2:hover {
+      background: #fff;
+      transform: translateY(-10px);
+      color: #737759;
+    }
+    .contact-right form {
+      width: 100%;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: #cad19f;
+      padding: 15px;
+      margin: 15px 0;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+    form .btn2 {
+      padding: 14px 60px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .copyright {
+      width: 100%;
+      text-align: center;
+      padding: 25px 0;
+      background: #535231;
+      font-weight: 300;
+      margin-top: 20px;
+    }
+    .copyright i {
+      color: #ccbb9b;
+    }
+    @media screen and (max-width: 1000px) and (max-height: 1000px) {
+      nav ul li a {
+        font-size: 3px;
+      }
+      nav ul li img {
+        height: 10px;
+        width: 10px;
+      }
+      .enjoy {
+        margin: auto;
+        margin-top: 200px;
+      }
+      .yow {
+        margin: auto;
+      }
+      .tombol {
+        margin-top: 20px;
+        height: 170px;
+      }
+      .judul {
+        margin: auto;
+        margin-left: 30px;
+      }
+      .gambar {
+        display: block;
+        margin-left: 50px;
+      }
+      .kotak {
+        margin-top: 100px;
+      }
+      .dua {
+        display: none;
+      }
+      .populer h2 {
+        margin-top: 100px;
+        text-align: left;
+        margin-left: 40px;
+      }
+      #popular {
+        margin-top: 70px;
+      }
+      .limited {
+        width: 300px;
+        height: 800px;
+        margin: auto;
+        padding: 10px 15px;
+        display: block;
+      }
+      .text-cake {
+        font-size: 20px;
+      }
+      .text-cake-subjudul {
+        font-size: 10px;
+      }
+      .text-cake-isi {
+        font-size: 13px;
+        width: 250px;
+      }
+      .limited img {
+        height: 350px;
+        width: 240px;
+        margin-left: 10px;
+      }
+      .latar-belakang {
+        height: 1000px;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+        justify-content: space-between;
+        padding: 20px 60px;
+      }
+    }
+  </style>
+  <body>
+    <!-- navbar -->
+    <div id="header">
+      <div class="container">
+        <header>
+          <nav class="navbar" data-navbar>
+            <img src="/logo.png" class="logo" />
+            <ul class="navbar-list">
+              <li><a href="#header" class="navbar-link">Home</a></li>
+              <li><a href="#about" class="navbar-link">About</a></li>
+              <li><a href="#popular" class="navbar-link">Popular</a></li>
+              <li><a href="#promo" class="navbar-link">Promo</a></li>
+              <li><a href="#kontak" class="navbar-link">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <div class="head">
+        <div class="container">
+          <h1 class="enjoy">Enjoy Delicious Korean Cake</h1>
+          <p class="yow">
+            enjoying the sweet taste is an incomparable happiness. taste and
+            enjoy the taste.
+          </p>
+          <div class="tombol">
+            <button class="button reservasi">Reservation</button>
+            <button class="button order">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- badan 1 -->
+    <div>
+      <div id="about"></div>
+      <h1 class="judul">About us</h1>
+    </div>
+    <div class="gambar">
+      <div class="kotak satu">
+        <img src="/cake anggur.png" alt="" />
+        Cake with high ratings and biggest sales since the shop opened. Be the
+        customer's number 1 subscription.
+      </div>
+      <div class="kotak dua">
+        <img src="/waffle.png" alt="" />
+      </div>
+      <div class="kotak tiga">
+        <img src="/stroberry.png" alt="" />
+        <span
+          >The best-selling cake throughout 2023 with the number of customers'
+          favorites who like low sugar cakes.</span
+        >
+      </div>
+      <div class="populer">
+        <h2>we provide low sugar desserts <span></span></h2>
+        <button>See more ></button>
+      </div>
+    </div>
+
+    <!-- badan 2 -->
+    <div id="popular">
+      <h1 class="judul">Popular</h1>
+    </div>
+
+    <div class="gambar">
+      <div class="gambar">
+        <div class="gambar1">
+          <img src="/lemon.png" alt="" />
+          <p style="color: #cad19f; font-size: 25px; font-weight: bold">
+            Lemon Petit Fours with Mint Sensation
+          </p>
+          <div class="kotakaa">
+            <button class="icon">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+            <p
+              style="
+                margin-top: 25px;
+                font-size: 25px;
+                font-weight: bold;
+                cursor: pointer;
+              "
+            >
+              $5.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="gambar">
+        <div class="gambar1">
+          <img src="/vanilla.png" alt="" />
+          <p style="color: #cad19f; font-size: 25px; font-weight: bold">
+            Vanilla Soft Cheese Cake Sweet
+          </p>
+          <div class="kotakaa">
+            <button class="icon">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+            <p
+              style="
+                margin-top: 25px;
+                font-size: 25px;
+                font-weight: bold;
+                cursor: pointer;
+              "
+            >
+              $4.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="gambar">
+        <div class="gambar1">
+          <img src="/yuju.png" alt="" />
+          <p style="color: #cad19f; font-size: 25px; font-weight: bold">
+            Cake Sweet Yuju Orange Japan
+          </p>
+          <div class="kotakaa">
+            <button class="icon">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+            <p
+              style="
+                margin-top: 25px;
+                font-size: 25px;
+                font-weight: bold;
+                cursor: pointer;
+              "
+            >
+              $7.00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="gambar">
+        <div class="gambar1">
+          <img src="/peach.png" alt="" />
+          <p style="color: #cad19f; font-size: 25px; font-weight: bold">
+            Peach & Mullberry Sour Jam Cake
+          </p>
+          <div class="kotakaa">
+            <button class="icon">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+            <p
+              style="
+                margin-top: 25px;
+                font-size: 25px;
+                font-weight: bold;
+                cursor: pointer;
+              "
+            >
+              $9.00
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- badan 3 -->
+    <div class="latar-belakang">
+      <div class="backgroung_promo">
+        <div id="promo">
+          <h1 class="judul">Promotion</h1>
+        </div>
+        <div class="limited-cake">
+          <div class="limited">
+            <div class="cake">
+              <p class="text-cake">Blue Sky Cake Glass Sugar</p>
+              <p class="text-cake-subjudul">Limited Cake</p>
+              <div class="text-cake-isi">
+                <p>
+                  Discounts of up to 45% for 10 lucky buyers. Of course, with
+                  customers who are registered as our regular customers. And for
+                  customers who don't subscribe and new customers get a 25%
+                  discount for 10 lucky customers.
+                </p>
+              </div>
+              <button class="tombol-order">Order Now ></button>
+            </div>
+            <img src="limited.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- kontak -->
+
+    <div id="kontak">
+      <h1 class="judul">Contact</h1>
+      <div class="container">
+        <div class="hei">
+          <div class="contact-left">
+            <p><i class="fa-solid fa-paper-plane"></i> yurashin43@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 085823190919</p>
+          </div>
+          <div class="social-icons">
+            <a href="http://instagram.com/sha_s.k15"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://tiktok.com/.-semesta-."
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href="https://pinterest.com/Shask15"
+              ><i class="fa-brands fa-square-pinterest"></i
+            ></a>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div class="copyright">
+      <p>copyright © Shasa, <i class="fa-solid fa-heart"></i> Made By Shasa</p>
+    </div>
+  </body>
+</html>
